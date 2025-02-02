@@ -4,10 +4,10 @@
     <title>Health App Wireframes</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
-            background: #f9f9f9;
+            background: white;
         }
         .phone-frame {
             width: 360px;
@@ -15,40 +15,15 @@
             background: white;
             margin: 20px auto;
             padding: 20px;
-            border: 2px dashed #999;
+            border: 2px dashed #666;
             border-radius: 20px;
             position: relative;
             overflow-y: auto;
         }
-        .phone-frame::before {
-            content: '📱';
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 24px;
-        }
         .emergency-card {
-            border: 3px solid #ff4444;
+            border: 2px dashed #666;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 10px;
-            position: relative;
-            background: repeating-linear-gradient(-45deg, #ff9999, #ff9999 10px, #ff8888 10px, #ff8888 20px);
-            color: white;
-            transform: rotate(-0.5deg);
-        }
-        .emergency-card::after {
-            content: '🚨';
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            font-size: 24px;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
         }
         .emergency-header {
             display: flex;
@@ -58,156 +33,117 @@
         .emergency-icon {
             width: 40px;
             height: 40px;
-            border: 2px solid white;
+            border: 2px dashed #666;
             border-radius: 20px;
             margin-right: 15px;
-            background: rgba(255,255,255,0.2);
-            position: relative;
-        }
-        .emergency-icon::after {
-            content: '📞';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
         .emergency-button {
-            background: white;
-            color: #ff4444;
+            border: 2px dashed #666;
             padding: 15px;
-            border-radius: 8px;
             text-align: center;
-            font-weight: bold;
             margin-bottom: 10px;
-            border: 2px solid #ff4444;
-            transform: rotate(-1deg);
-            position: relative;
-        }
-        .emergency-button:nth-child(2n) {
-            transform: rotate(1deg);
         }
         .card {
-            border: 2px solid #666;
+            border: 2px dashed #666;
             padding: 15px;
             margin-bottom: 20px;
-            border-radius: 10px;
-            position: relative;
-            background: white;
-            transform: rotate(-0.5deg);
-        }
-        .card::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border: 2px solid #ddd;
-            border-radius: 12px;
-            z-index: -1;
         }
         .contact-card {
             padding: 15px;
             margin: 10px 0;
-            border: 2px solid #666;
-            border-radius: 8px;
-            background: repeating-linear-gradient(-45deg, #fff, #fff 10px, #f9f9f9 10px, #f9f9f9 20px);
+            border: 2px dashed #666;
             display: flex;
             align-items: center;
-            transform: rotate(-1deg);
-        }
-        .contact-card:nth-child(2n) {
-            transform: rotate(1deg);
         }
         .contact-avatar {
             width: 40px;
             height: 40px;
-            border: 2px solid #666;
+            border: 2px dashed #666;
             border-radius: 20px;
             margin-right: 15px;
-            background: repeating-linear-gradient(45deg, #ddd, #ddd 5px, #fff 5px, #fff 10px);
         }
         .protocol-card {
             padding: 15px;
             margin-bottom: 15px;
-            border: 2px solid #666;
-            border-radius: 8px;
-            background: white;
-            transform: rotate(-1deg);
+            border: 2px dashed #666;
         }
         .step-item {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
             padding: 5px;
-            border: 1px dashed #999;
-            border-radius: 5px;
-            background: repeating-linear-gradient(-45deg, #fff, #fff 10px, #f9f9f9 10px, #f9f9f9 20px);
+            border: 1px dashed #666;
         }
         .step-number {
             width: 24px;
             height: 24px;
-            background: #ff4444;
-            color: white;
+            border: 2px dashed #666;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 10px;
             font-size: 12px;
-            border: 2px solid #ff4444;
         }
         .screen-title {
             text-align: center;
             font-size: 24px;
             margin: 20px 0;
             color: #333;
-            text-decoration: underline wavy #666;
+        }
+        .action-button {
+            width: 40px;
+            height: 40px;
+            border: 2px dashed #666;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <h1 class="screen-title">✏️ Emergency Screen Wireframe</h1>
+    <h1 class="screen-title">Emergency Screen Wireframe</h1>
     <div class="phone-frame">
         <!-- Emergency Actions -->
         <div class="emergency-card">
             <div class="emergency-header">
                 <div class="emergency-icon"></div>
                 <div>
-                    <div style="font-size: 20px; font-weight: bold;">Emergency Services</div>
-                    <div style="opacity: 0.9;">[Get immediate assistance]</div>
+                    <div>[Emergency Services]</div>
+                    <div>[Get immediate assistance]</div>
                 </div>
             </div>
-            <div class="emergency-button">📞 Call 911</div>
-            <div class="emergency-button">📍 Share Location</div>
+            <div class="emergency-button">[Call Emergency]</div>
+            <div class="emergency-button">[Share Location]</div>
         </div>
 
         <!-- Emergency Contacts -->
         <div class="card">
-            <h3>☎️ Emergency Contacts</h3>
+            <h3>[Emergency Contacts]</h3>
             <div class="contact-card">
                 <div class="contact-avatar"></div>
                 <div style="flex: 1;">
-                    <div>Dr. [Name]</div>
-                    <div style="color: #666;">[Specialty] - [Phone]</div>
+                    <div>[Contact Name]</div>
+                    <div>[Role - Phone]</div>
                 </div>
-                <div style="width: 40px; height: 40px; border: 2px solid #666; border-radius: 20px; display: flex; align-items: center; justify-content: center;">📞</div>
+                <div class="action-button">[Call]</div>
             </div>
             <div class="contact-card">
                 <div class="contact-avatar"></div>
                 <div style="flex: 1;">
-                    <div>Dr. [Name]</div>
-                    <div style="color: #666;">[Specialty] - [Phone]</div>
+                    <div>[Contact Name]</div>
+                    <div>[Role - Phone]</div>
                 </div>
-                <div style="width: 40px; height: 40px; border: 2px solid #666; border-radius: 20px; display: flex; align-items: center; justify-content: center;">📞</div>
+                <div class="action-button">[Call]</div>
             </div>
         </div>
 
         <!-- Emergency Protocols -->
         <div class="card">
-            <h3>⚕️ Emergency Protocols</h3>
+            <h3>[Emergency Protocols]</h3>
             <div class="protocol-card">
-                <div style="font-weight: bold; margin-bottom: 10px;">🫀 Chest Pain</div>
+                <div>[Protocol Title]</div>
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div>[Step description]</div>
@@ -222,7 +158,7 @@
                 </div>
             </div>
             <div class="protocol-card">
-                <div style="font-weight: bold; margin-bottom: 10px;">🩺 Low Blood Sugar</div>
+                <div>[Protocol Title]</div>
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div>[Step description]</div>
@@ -240,20 +176,20 @@
 
         <!-- Additional Resources -->
         <div class="card">
-            <h3>ℹ️ Additional Resources</h3>
+            <h3>[Additional Resources]</h3>
             <div class="contact-card">
                 <div style="flex: 1;">
-                    <div>🏥 Nearest Hospital</div>
-                    <div style="color: #666;">[Name] - [Distance]</div>
+                    <div>[Resource Name]</div>
+                    <div>[Details]</div>
                 </div>
-                <div style="width: 40px; height: 40px; border: 2px solid #666; border-radius: 20px; display: flex; align-items: center; justify-content: center;">🗺️</div>
+                <div class="action-button">[Action]</div>
             </div>
             <div class="contact-card">
                 <div style="flex: 1;">
-                    <div>☠️ Poison Control</div>
-                    <div style="color: #666;">[Emergency Number]</div>
+                    <div>[Resource Name]</div>
+                    <div>[Details]</div>
                 </div>
-                <div style="width: 40px; height: 40px; border: 2px solid #666; border-radius: 20px; display: flex; align-items: center; justify-content: center;">📞</div>
+                <div class="action-button">[Action]</div>
             </div>
         </div>
     </div>
